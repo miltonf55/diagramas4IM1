@@ -8,7 +8,7 @@ function Selector() {
         id="start-end"
         className="text-center fs-4"
         draggable="true"
-        ondragstart="onDragStart(event);"
+        onDragStart={onDragStart(event)}
         >Inicio / Final
         </div>
         <div
