@@ -1,7 +1,10 @@
 function Canvas() {
   return (
-    <div>
-        <canvas className="Canvas"></canvas>
+    <div
+    className="Canvas"
+    ondragover="onDragOver(event);"
+    ondrop="onDrop(event);"
+    >
     </div>
   );
 }
