@@ -39,7 +39,7 @@ function onDragStart(event) {
       newDiv.setAttribute("class", "desicion");
       newDiv.setAttribute("data-bs-toggle", "modal");
       newDiv.setAttribute("data-bs-target", "#exampleModal");
-      var newContent = document.createTextNode("Desicion");
+      var newContent = document.createTextNode("Desición");
       newDiv.appendChild(newContent); //añade texto al div creado.
     }
     const dropzone = event.target;
