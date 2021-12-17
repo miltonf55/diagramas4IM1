@@ -86,7 +86,7 @@ function onDragStart(event) {
   }
   function cambiar(){
     let cT=document.getElementById('cT').value;
-    let cB;document.getElementById('cB').value;
+    let cB=document.getElementById('cB').value;
     let t=document.getElementById('message-text').value;
 
     let element=document.getElementById(actualID);
