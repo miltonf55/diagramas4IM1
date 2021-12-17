@@ -1,4 +1,5 @@
 const express = require("express");
+const fsPromise = require('fs').promises;
 
 const app = express();
 
@@ -11,6 +12,16 @@ app.get("/", (req, res) => {
         TituloPagina: "Bienvenido",
         Inicio: "Si"
     });
+});
+app.post("/download", (req, res) => {
+    var data=req;
+    fsPromise.writeFile(__dirname + '/fileDown/archivo.json', data, error => {
+        if (error)
+        console.log(error);
+        else
+        console.log('El archivo fue creado');
+    });
+    res.download(__dirname + '/fileDown/archivo.json');
 });
 /*app.get("/contact", (req, res) => {
     res.render("contact", {
