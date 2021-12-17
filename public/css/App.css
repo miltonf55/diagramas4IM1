@@ -54,13 +54,14 @@
 }
 #explicacion{
   height: 9vh;
+  margin-left: 2%;
 }
 .codigo{
   height: 27vh;
   width: 100%;
   border-radius: 5px;
   background-color: #FFF7F8;
-  overflow: scroll;
+  overflow-y: hidden;
 }
 
 

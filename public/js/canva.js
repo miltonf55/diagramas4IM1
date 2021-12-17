@@ -2,7 +2,6 @@ var c=0;
 
 function onDragStart(event) {
     event.dataTransfer.setData('text/plain', event.target.id);
-    //event.currentTarget.style.backgroundColor = 'yellow';
     event.dataTransfer.dropEffect = "copy";
   }
   function onDragOver(event) {
@@ -45,19 +44,9 @@ function onDragStart(event) {
     const dropzone = event.target;
     dropzone.appendChild(newDiv);
     event.dataTransfer.clearData();
+    generarCodigo()
   }
   
-  /*function checkCookie() {
-    let dato = getCookie("dato");
-    if (dato != "") {
-      setCookie("dato", dato++);
-    } else {
-      username = prompt("Please enter your name:", "");
-      if (username != "" && username != null) {
-        setCookie("username", username, 365);
-      }
-    }
-  }*/
 
   var exampleModal = document.getElementById('exampleModal');
   var actualID;
@@ -93,7 +82,7 @@ function onDragStart(event) {
     element.style.color=cT;
     element.style.backgroundColor=cB;
     element.innerHTML=t;
-
+    generarCodigo()
   }
 
   function rgb2hex(rgb) {
@@ -105,3 +94,37 @@ function onDragStart(event) {
     }
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
   }
+  var myCodeMirror = CodeMirror(document.getElementById('code'), {
+    lineNumbers: true,
+    smartIndent: true,
+    readOnly: true,
+    theme: 'monokai',
+    mode:  "text/x-csrc",
+    value: `#include <stdio.h>
+    void main(){
+      /* Aqui se crea el codigo en C*/
+      return 0;
+    } `
+  });
+
+  window.onload = myCodeMirror
+
+  const generarCodigo = () => {
+      let start_end = document.getElementById('canvas').getElementsByClassName('start-end')
+      let proceso = document.getElementById('canvas').getElementsByClassName('proceso');
+      let entrada = document.getElementById('canvas').getElementsByClassName('entrada');
+      let desicion = document.getElementById('canvas').getElementsByClassName('desicion');
+      console.log(start_end)
+      console.log(proceso)
+      console.log(entrada)
+      console.log(desicion)
+      let codigo = []
+      for(let i=0; i<start_end.length; i++){
+        codigo[i]=start_end[i].innerHTML
+      }
+      for(let i=0; i<proceso.length; i++){
+        codigo[i]=proceso[i].innerHTML+';'
+      }
+      console.log(codigo)
+  }
+  
