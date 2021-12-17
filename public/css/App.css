@@ -5,10 +5,16 @@
   color: #FFF7F8;
 }
 .Canvas{
-  height: 99vh;
+  height: 70vh;
   width: 100%;
   border-radius: 5px;
   background-color: #FFF7F8;
+  margin-bottom: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 #start-end{
   clip-path: ellipse(45% 30% at 50% 50%);
@@ -17,6 +23,7 @@
   height: 20vh;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 #proceso{
   clip-path:  inset(20% 5% 20% 5%);
@@ -25,6 +32,7 @@
   height: 20vh;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 #entrada{
   clip-path: polygon(25% 20%, 95% 20%, 75% 80%, 5% 80%);
@@ -33,6 +41,7 @@
   height: 20vh;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 #desicion{
   clip-path: polygon(5% 50%, 50% 20%, 95% 50%, 50% 80%);
@@ -41,8 +50,59 @@
   height: 20vh;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 #explicacion{
   height: 9vh;
+}
+.codigo{
+  height: 27vh;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #FFF7F8;
+  overflow: scroll;
+}
+
+
+.start-end{
+  clip-path: ellipse(45% 30% at 50% 50%);
+  background-color: #3F4551;
+  color: #FFF7F8;
+  height: 15vh;
+  width: 20vh;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.proceso{
+  clip-path:  inset(20% 5% 20% 5%);
+  background-color: #3F4551;
+  color: #FFF7F8;
+  height: 15vh;
+  width: 20vh;
+  border-color: #3F4551;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.entrada{
+  clip-path: polygon(25% 20%, 95% 20%, 75% 80%, 5% 80%);
+  background-color: #3F4551;
+  color: #FFF7F8;
+  height: 15vh;
+  width: 20vh;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.desicion{
+  clip-path: polygon(5% 50%, 50% 20%, 95% 50%, 50% 80%);
+  background-color: #3F4551;
+  color: #FFF7F8;
+  height: 15vh;
+  width: 20vh;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 }
 
